@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="windows 1251">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запланировать отправку</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../LOGO.png" type="image/img">
+</head>
+<body>
+    <header>
+        <div class="All_header_menu">
+            
+            <div class="Menu" style="background-color: rgb(64, 176, 208);">
+                <ul>
+                    <li>
+                        <div class="Logo">
+                             <h1 style="color: rgb(229, 249, 255);">MasPost</h1>
+                        </div>
+                    </li>
+                    <li>
+                        
+                        <a style="color: rgb(64, 176, 208);"> === </a>
+                    </li>
+                        <a href="../index.html">На главную  </a>
+                    </li> 
+                    <li>
+                        
+                        <a style="color: rgb(64, 176, 208);"> = </a>
+                    </li>               
+                    <li>
+                        <a href="NewsBox.htm">  Купить ящик</a>
+                    </li>                    
+                    <li>
+                        <a style="color: rgb(64, 176, 208);"> = </a>
+                    </li>
+                    <li>
+                        <a href="Send.htm">  Запланировать отправку из дома </a>
+                    </li>
+                    <li>
+                        <a style="color: rgb(64, 176, 208);"> = </a>
+                    </li>
+                    <li>
+                        <a href="Help.htm">  Помощь </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+<h1 style="color: rgb(64, 176, 208);">Инструкция:</h1>
+<img src="../img/helpsend.png" style="height: 50%; width: 50%;">
+
+
+
+<div class="container">
+    <from action="#" class="from" name="submit-to-google-sheet">
+    <h1 style="color: red;"> Отправить заявку: НЕДОСТУПНО! </h1>
+     <input type="number" name="YouCode" id="YouCode" autocomplete="off" placeholder="Введите ваш номер отправителя" required> <p>
+  
+     <input type="email" name="Mail" id="Mail" autocomplete="off" placeholder="Введите ваш e-mail для связи" required> <p>
+  
+     <input type="text" name="Addres" id="Addres" autocomplete="off" placeholder="Введите адрес доставки" required> <p>
+  
+     <input type="date" name="Date" id="Date" autocomplete="off" required> <p>
+  
+     <input type="time" name="Time" id="Time" autocomplete="off" required> <p>
+  
+     <input type="text" name="Number" id="Number" autocomplete="off" placeholder="Введите номер телефона/ссылку на VK" required> <p>
+  
+     <input type="text" name="Name" id="Name" autocomplete="off" placeholder="Введите имя получателя" required> <p>
+  
+      <label for="BuyType" required>Выберите тип оплаты:</label> <p>
+      <select id="BuyType" name="BuyType">
+        <option value="apple">После отправки</option>
+        <option value="banana">При получении</option>
+        <option value="orange">При отправки</option>
+      </select> <p>
+       
+       <button type="submit"> Отправить </button>
+  
+    </from>
+  </div>
+  
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx_FwYan7lmL7UqgNVD1ccZJ4to_iqpPcUH9NgHkohS6YkzseGLbKwYDCBMsklbLMf_sw/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+
+</body>
+</html>
