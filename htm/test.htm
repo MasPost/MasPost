@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+    <meta charset="windows 1251">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VKLogin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <head>
+      <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld0muwpAAAAALaqt1qbvuCSnFD9jX9kiljcO1YV"></script>
+    </head>
+</head>
+<body style="display: flex; justify-content: center;">
+
+<div class="container">
+  <from  action="https://api.web3forms.com/submit" method="POST">
+  <h1> Отправить заявку: </h1>
+
+
+  <input type="hidden" name="access_key" value="c38e1bbb-be5f-402c-b4ea-c8a4b137a1e0">
+
+  
+     <button type="submit"> Отправить </button>
+
+  </from>
+</div>
+
+
+
+
+<form action="https://api.web3forms.com/submit" method="POST">
+
+  <input type="hidden" name="access_key" value="c38e1bbb-be5f-402c-b4ea-c8a4b137a1e0">
+
+  <input type="number" name="Код пользователя" autocomplete="off" placeholder="Введите ваш номер отправителя" required> <p>
+
+    <input type="email" name="Эл. почта" autocomplete="off" placeholder="Введите ваш e-mail для связи" required> <p>
+ 
+    <input type="text" name="Адрес доставки" autocomplete="off" placeholder="Введите адрес доставки" required> <p>
+ 
+    <input type="date" name="Дата сбора" autocomplete="off" required> <p>
+ 
+    <input type="time" name="Время сбора" autocomplete="off" required> <p>
+ 
+    <input type="text" name="Доп. связь" autocomplete="off" placeholder="Введите номер телефона/ссылку на VK" required> <p>
+ 
+    <input type="text" name="Имя получателя" autocomplete="off" placeholder="Введите имя получателя" required> <p>
+ 
+     <label for="BuyType" required>Выберите тип оплаты:</label> <p>
+     <select id="BuyType" name="Тип оплаты">
+       <option value="После отправки">После отправки</option>
+       <option value="При получении">При получении</option>
+       <option value="При отправки">При отправки</option>
+     </select> <p>
+
+    <button type="submit">Оставить заявку</button>
+      
+</form>
+
+
+
+
+</body>
+</html>

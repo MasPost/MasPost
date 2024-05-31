@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="windows 1251">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запланировать отправку</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../LOGO.png" type="image/img">
+</head>
+<body>
+    <header>
+        <div class="All_header_menu">
+            
+            <div class="Menu" style="background-color: rgb(64, 176, 208);">
+                <ul>
+                    <li>
+                        <div class="Logo">
+                             <h1 style="color: rgb(229, 249, 255);">MasPost</h1>
+                        </div>
+                    </li>
+                    <li>
+                        
+                        <a style="color: rgb(64, 176, 208);"> === </a>
+                    </li>
+                        <a href="../index.html">На главную  </a>
+                    </li> 
+                    <li>
+                        
+                        <a style="color: rgb(64, 176, 208);"> = </a>
+                    </li>               
+                    <li>
+                        <a href="NewsBox.htm">  Купить ящик</a>
+                    </li>                    
+                    <li>
+                        <a style="color: rgb(64, 176, 208);"> = </a>
+                    </li>
+                    <li>
+                        <a href="Send.htm">  Запланировать отправку из дома </a>
+                    </li>
+                    <li>
+                        <a style="color: rgb(64, 176, 208);"> = </a>
+                    </li>
+                    <li>
+                        <a href="Help.htm">  Помощь </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+<h1 style="color: rgb(64, 176, 208);">Инструкция:</h1>
+<img src="../img/helpsend.png" style="height: 90%; width: 50%;">
+
+<h1> Отправить заявку: </h1>
+<form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="c38e1bbb-be5f-402c-b4ea-c8a4b137a1e0">
+  
+    <input type="number" name="Код пользователя" autocomplete="off" placeholder="Введите ваш номер отправителя" required> <p>
+  
+      <input type="email" name="Эл. почта" autocomplete="off" placeholder="Введите ваш e-mail для связи" required> <p>
+   
+      <input type="text" name="Адрес доставки" autocomplete="off" placeholder="Введите адрес доставки" required> <p>
+   
+      <input type="date" name="Дата сбора" autocomplete="off" required> <p>
+   
+      <input type="time" name="Время сбора" autocomplete="off" required> <p>
+   
+      <input type="text" name="Доп. связь" autocomplete="off" placeholder="Введите номер телефона/ссылку на VK" required> <p>
+   
+      <input type="text" name="Имя получателя" autocomplete="off" placeholder="Введите имя получателя" required> <p>
+   
+       <label for="BuyType" required>Выберите тип оплаты:</label> <p>
+       <select id="BuyType" name="Тип оплаты">
+         <option value="После отправки">После отправки</option>
+         <option value="При получении">При получении</option>
+         <option value="При отправки">При отправки</option>
+       </select> <p>
+  
+      <button type="submit">Оставить заявку</button>
+        
+  </form>
+
+</body>
+</html>

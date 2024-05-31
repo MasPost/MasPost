@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="windows 1251">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробности о картонном ящике</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../LOGO.png" type="image/img">
+</head>
+<body style="background-color: rgb(229, 249, 255); color: rgb(64, 176, 208);">
+<img src="../../img/CartoonBox.png">
+<h1> Отправить заявку: </h1>
+<form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="c38e1bbb-be5f-402c-b4ea-c8a4b137a1e0">
+  
+    <select name="Когфигурация" required  style="background-color: rgb(229, 249, 255);">
+            <option value="Сделай сам" style="background-color: rgb(229, 249, 255);">Сделай сам</option>
+            <option value="Собери детали">Собери детали</option>
+            <option value="Готовый ящик">Готовый ящик</option>
+    </select> <p>
+
+    <input type="text" name="Адрес доставки" autocomplete="off" placeholder="Введите адрес доставки" required> <p>
+ 
+        <input type="date" name="Дата доставки" autocomplete="off" required> <p>
+     
+        <input type="time" name="Время доставки" autocomplete="off" required> <p>
+     
+  
+    <button type="submit" style="font-size: 25px; font-family: Arial Black; color: rgb(229, 249, 255); border-style: none; background-color: rgb(64, 176, 208);">Заказать</button> <p>
+        
+  </form>
+</body>
+</html>
